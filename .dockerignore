@@ -1,0 +1,14 @@
+*~
+*.pyc
+*.zip
+*.tar.gz
+*.rar
+*.h5
+
+*secret*
+
+.git
+.idea
+
+**/__pycache__/
+**/data/
