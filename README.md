@@ -2,6 +2,16 @@
 
 This repository contains the code for the paper "**TSViz: Demystification of Deep Learning Models for Time-Series Analysis**".
 
+## Plots
+
+The plots in the paper were generated using the createTSVizPlots.py script present in the repository.
+The user has to manually configure the layer and the input example to plot. 
+These parameters are present in the main method of the script. Two sample plots from the script are visualized below.
+
+<!-- ![Stacked View](./images/stacked_view.png?raw=true&s=100 "Stacked View"){:width="50px"} -->
+<img src="./images/stacked_view.png" width="700">
+<img src="./images/grid_view.png" width="700">
+
 ## Core
 
 ### Deployment
@@ -88,6 +98,8 @@ while True:
 
 ### Exposed methods
 
+Details regarding the different parameters consumed by the method are available directly in the code.
+
 #### /viz/api/train [GET]
 
 Switches to the train set for the retrieval of examples.
@@ -170,7 +182,7 @@ The method takes in an examples argument which specifies the number of examples 
 
 #### /viz/api/prune?indices=[1,2,3]&name=new_model&epochs=20&mode=prune [GET]
 
-Prunes the model based on the given indices and then fine-tunes model based on the defined parameters.
+Prunes the model by removing the filters identified by the given indices and then fine-tunes model based on the defined parameters.
 Mode can either be 'prune' or 'adjust'.
 
 #### /viz/api/test_model [GET]
@@ -181,8 +193,9 @@ Tests the model based on the given test set.
 
 Loads a stored model.
 
-#### /viz/api/get_filter_list_from_file? [GET]
+#### /viz/api/get_filter_list_from_file?mode=1&submode=2&percentile=90 [GET]
 
+Returns the list of filter indices that are most/least important based on the provided parameters.
 
 ## Cite
 

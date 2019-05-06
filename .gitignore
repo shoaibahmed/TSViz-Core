@@ -10,7 +10,7 @@
 **/__pycache__/
 **/.idea/
 **/data/
-**/OutputPlots/
+**/PresentationPlots/
 **/Build/
 **/Library/
 **/datasets/
