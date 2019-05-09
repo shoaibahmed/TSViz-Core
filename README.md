@@ -9,8 +9,10 @@ The user has to manually configure the layer and the input example to plot.
 These parameters are present in the main method of the script. Two sample plots from the script are visualized below.
 
 <!-- ![Stacked View](./images/stacked_view.png?raw=true&s=100 "Stacked View"){:width="50px"} -->
-<img src="./images/stacked_view.png" width="700">
-<img src="./images/grid_view.png" width="700">
+<p align="center">
+  <img src="./images/stacked_view.png" width="700">
+  <img src="./images/grid_view.png" width="700">
+</p>
 
 ## Core
 
@@ -200,22 +202,18 @@ Returns the list of filter indices that are most/least important based on the pr
 ## Cite
 
 ```
-@article{DBLP:journals/corr/abs-1802-02952,
-  author    = {Shoaib Ahmed Siddiqui and
-               Dominik Mercier and
-               Mohsin Munir and
-               Andreas Dengel and
-               Sheraz Ahmed},
-  title     = {TSViz: Demystification of Deep Learning Models for Time-Series Analysis},
-  journal   = {CoRR},
-  volume    = {abs/1802.02952},
-  year      = {2018},
-  url       = {http://arxiv.org/abs/1802.02952},
-  archivePrefix = {arXiv},
-  eprint    = {1802.02952},
-  timestamp = {Thu, 01 Mar 2018 15:00:45 +0100},
-  biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1802-02952},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@ARTICLE{tsviz, 
+  author={S. A. {Siddiqui} and D. {Mercier} and M. {Munir} and A. {Dengel} and S. {Ahmed}}, 
+  journal={IEEE Access}, 
+  title={TSViz: Demystification of Deep Learning Models for Time-Series Analysis}, 
+  year={2019}, 
+  volume={}, 
+  number={}, 
+  pages={1-1}, 
+  keywords={Deep learning;Analytical models;Visualization;Computational modeling;Optimization;Neurons;Neural networks;Deep Learning;Representation Learning;Convolutional Neural Networks;Time-Series Analysis;Time-Series Forecasting;Feature Importance;Visualization;Demystification}, 
+  doi={10.1109/ACCESS.2019.2912823}, 
+  ISSN={2169-3536}, 
+  month={},
 }
 ```
 
