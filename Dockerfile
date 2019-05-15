@@ -1,4 +1,4 @@
-FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
+FROM nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04
 #FROM alpine:latest
 
 MAINTAINER Shoaib Ahmed Siddiqui <shoaib_ahmed.siddiqui@dfki.de>
@@ -30,8 +30,8 @@ RUN /conda/bin/conda install python=3.6
 
 # Install TensorFlow
 RUN /conda/bin/pip install \
-    tensorflow-gpu \
-    keras \
+    tensorflow-gpu==1.13.1 \
+    keras==2.2.4 \
     flask \
     flask-cors \
     scikit-learn \

@@ -640,11 +640,11 @@ def plotInverseOptimizationAndAdversarialExamples():
 # Main function
 if __name__ == "__main__":
     completePlotting = True
-    batchMode = False
-    exampleIdx = 60
+    batchMode = True
+    exampleIdx = 6
 
     url = "http://pc-4133:5000/viz/api/"
-    layerID = 1  # Second conv layer
+    layerID = 3  # Second conv layer
 
     # Plot the examples
     rootDirectory = "./PresentationPlots/"
@@ -695,12 +695,14 @@ if __name__ == "__main__":
 
             data = json.loads(response.content.decode("utf-8"))["data"]
             inputFeatureNames = data[inputFeaturesNamesIdx]
+            layerNames = data[layerNamesIdx]
             classes = data[classNamesIdx]
             forecastingTask = (data[datasetTypeIdx] == "Regression")
             if forecastingTask:
                 assert len(data[-1]) == 1, "Error: Multi-variable forecasting not supported at this point!"
 
             gt = data[groundTruthIdx]
+            print("Fetching output from layer:", layerNames[layerID])
             print("Class names:", classes, "| Input features:", inputFeatureNames)
             print("Ground Truth:", gt, "| Prediction:", data[-1][0][rawValueIdx])  # Zero denotes the filter idx (only one output class)
             assert(not batchMode or gt == 1.0)
